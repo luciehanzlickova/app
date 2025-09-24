@@ -1,0 +1,11 @@
+namespace ConsoleApp2;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Hello, World!");
+        int sisky = int.Parse(Console.WriteLine());
+        if(sisky > 10 || sisky < 8)
+    }
+}
