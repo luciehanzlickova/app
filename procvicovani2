@@ -1,0 +1,24 @@
+Console.WriteLine("Hello World!"); //output
+Console.ReadLine(); //input
+
+
+string name = "John";      //proměnná 
+Console.WriteLine(name);      //proměnná 
+
+
+int myNum = 5;                 // Integer (celá čísla)
+double myDoubleNum = 5.99D;       // desetinná čísla
+char myLetter = 'D';                // jedno písmeno
+bool myBool = true;          // true/false
+string myText = "Hello";       // text
+
+
+menší než: a <b
+menší než nebo rovno: a <= b
+větší než: a> b
+větší než nebo rovno: a> = b
+rovná se: a == b
+není rovno: a != b
+
+
+w3schools
