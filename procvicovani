@@ -1,0 +1,15 @@
+namespace ConsoleApp1;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Hello, World!");
+        int znamka = int.Parse(Console.ReadLine());
+        switch (znamka)
+        {
+            case 1: Console.WriteLine ("vyborny"); break;
+        }
+    } 
+    
+}
