@@ -1,0 +1,30 @@
+namespace ConsoleApp1;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine(soucet(10,5));
+        Console.WriteLine(rozdil(10,5));
+        Console.WriteLine(nasobeni(10,5));
+        Console.WriteLine(deleni(10,5));
+    }
+
+    static int soucet(int a, int b)
+    {
+        return a + b;
+    }
+        static int rozdil(int a, int b)
+    {
+        return a - b;
+    }
+    static int nasobeni(int a, int b)
+    {
+        return a * b;
+    }
+
+    static double deleni(int a, int b)
+    {
+        return a / b;
+    }
+}
