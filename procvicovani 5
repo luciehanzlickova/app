@@ -1,0 +1,120 @@
+amespace OOPv2;
+
+public class Zamestnanec
+{
+    private string jmeno;
+    private int vyplata;
+    private string funkce;
+
+    public Zamestnanec(string jmeno, int vyplata, string funkce)
+    {
+        this.jmeno = jmeno;
+        this.vyplata = vyplata;
+        this.funkce = funkce;
+    }
+
+    public void PredstavSe()
+    {
+        Console.WriteLine($"Zaměstananec {jmeno} má funkci {funkce} a výplatu {vyplata}");
+    }
+
+    static public void PorovnejVyplaty(Zamestnanec zamestnanec, Zamestnanec zamestnanec2)
+    {
+        if (zamestnanec.vyplata > zamestnanec2.vyplata)
+        {
+            Console.WriteLine($"Zaměstanec {zamestnanec.jmeno} má vyšší výplatu než {zamestnanec2.jmeno}");
+        }
+        else
+        {
+            Console.WriteLine($"Zaměstanec {zamestnanec2.jmeno} má vyšší výplatu než {zamestnanec.jmeno}");
+        }
+    }
+
+    public int getVyplata()
+    {
+        return vyplata;
+    }
+
+    public void setVyplata(int hodnota)
+    {
+        if (hodnota > 0)
+        {
+            vyplata = hodnota;
+        }
+        else
+        {
+            Console.WriteLine("Výplata nemůže být záporná");
+        }
+        
+    }
+
+    public string getJmeno()
+    {
+        return jmeno;
+    }
+
+    public void setJmeno(string hodnota)
+    {
+        jmeno = hodnota;
+    }
+    public string getFunkce()
+    {
+        return funkce;
+    }
+
+    public void setFunkce(string hodnota)
+    {
+        funkce = hodnota;
+    }
+
+    public int Vyplata // Nový a přehlednější get/set
+    {
+        get
+        {
+            return vyplata;
+        }
+        set
+        {
+
+            if (value > 0)
+            {
+                vyplata = value;
+            }
+            else
+            {
+                Console.WriteLine("Výplata nemůže být záporná");
+            }
+            
+        } 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+namespace OOPv2;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Zamestnanec zamestnanec = new Zamestnanec("Karel", 10000, "Ředitel");
+        Zamestnanec zamestnanec2 = new Zamestnanec("Pepa", 100, "Uklízeč");
+        zamestnanec.PredstavSe();
+        zamestnanec.setVyplata(300);
+        zamestnanec.setVyplata(-1000);
+        Console.WriteLine(zamestnanec.getVyplata());
+        zamestnanec2.setJmeno("Zdenda");
+        Zamestnanec.PorovnejVyplaty(zamestnanec,zamestnanec2);
+        Console.WriteLine(zamestnanec2.Vyplata);
+        zamestnanec2.Vyplata = 300; // lepší setter
+        Console.WriteLine(zamestnanec2.Vyplata); // get stačí jedna metoda pro obě operace
+    }
+}
