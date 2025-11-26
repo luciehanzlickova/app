@@ -88,7 +88,30 @@ public class Zamestnanec
         } 
     }
 }
+  public string Jmeno
 
+    get
+    {
+        return jmeno;
+    }
+
+    set
+    {
+        jmeno = hodnota;
+    }
+    
+    public string Funkce
+
+    get
+    {
+        return funkce;
+    }
+
+    set
+    {
+        funkce = hodnota;
+    }
+}
 
 
 
