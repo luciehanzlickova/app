@@ -1,0 +1,35 @@
+namespace ConsoleApp8;
+
+internal class Doktor
+{
+    
+    private string specifikace;
+    private int pocetPacientu;
+    private bool jeVOrdinace;
+    private double vyplata;
+    
+    public Doktor(string specifikace,int pocetPacientu,double vyplata)
+        {
+        this.specifikace = specifikace;
+        this.pocetPacientu = pocetPacientu;
+        this.jeVOrdinace = true;
+        this.vyplata = vyplata;
+        }
+
+    public void Odejdi()
+    {
+        jeVOrdinace = false;
+    }
+
+    public void Prijdi()
+    {
+        jeVOrdinace = true;
+    }
+}
+
+
+
+
+
+
+
