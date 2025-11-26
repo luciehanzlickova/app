@@ -97,7 +97,7 @@ public class Zamestnanec
 
     set
     {
-        jmeno = hodnota;
+        jmeno = value;
     }
     
     public string Funkce
@@ -109,7 +109,7 @@ public class Zamestnanec
 
     set
     {
-        funkce = hodnota;
+        funkce = value;
     }
 }
 
